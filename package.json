@@ -1,0 +1,25 @@
+{
+  "name": "vscode-timeblok",
+  "displayName": "vscode-timeblok",
+  "description": "vscode support for timeblok",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "timeblok",
+      "aliases": ["Timeblok", "timeblok"],
+      "extensions": [".tb",".timeblok"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "timeblok",
+      "scopeName": "source.timeblok",
+      "path": "./syntaxes/timeblok.tmLanguage.json"
+    }]
+  }
+}

@@ -1,0 +1,78 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Timeblok",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#blocks"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"name": "comment.line.double-slash",
+			"match": "\\/\\/.*$"
+		}
+	],
+	"repository": {
+		"filter": {
+			"patterns": [{
+				"name": "keyword.logic.timeblok",
+				"match": "\\b(and|or|not)\\b"
+			},{
+				"name": "keyword.operator.logic.timeblok",
+				"match": "(&|\\||!)"
+			},{
+				"name": "entity.name",
+				"match": "\\b\\w+\\b"
+			}]
+		},
+		"keywords": {
+			"patterns": [
+			{
+				"name": "keyword.operator.tilde.timeblok",
+				"match": "~"
+			},{
+				"name": "keyword",
+				"match": "\\\/\\w+"
+			}]
+		},
+		"constants": {
+			"name": "constant.timeblok",
+			"patterns": [
+				{
+					"name": "constant.other.date",
+					"match": "\\d*-\\d*-\\d*"
+				},
+				{
+					"name": "constant.other.longtime",
+					"match": "\\d*:\\d*(AM|am|PM|pm)?"
+				},
+				{
+					"name": "constant.other.shorttime",
+					"match": "\\d*(AM|am|PM|pm)"
+				}
+			]
+		},
+		"blocks": {
+			"name": "meta.block.timeblok",
+			"begin": "\\{",
+			"end": "\\}",
+			"patterns": [
+				{
+					"include": "#keywords"
+				},
+				{
+					"include": "#blocks"
+				},{
+					"include": "#constants"
+				},{
+					"include": "#filter"
+				}
+			]
+		}
+	},
+	"scopeName": "source.timeblok"
+}
