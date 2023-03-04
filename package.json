@@ -1,5 +1,6 @@
 {
   "name": "vscode-timeblok",
+  "publisher": "JettChenT",
   "displayName": "vscode-timeblok",
   "description": "vscode support for timeblok",
   "repository": {
