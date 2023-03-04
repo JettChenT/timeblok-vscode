@@ -5,8 +5,9 @@
   "description": "vscode support for timeblok",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JettChenT/timeblok-vscode"},
-  "version": "0.0.1",
+    "url": "https://github.com/JettChenT/timeblok-vscode"
+  },
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -14,16 +15,26 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "timeblok",
-      "aliases": ["Timeblok", "timeblok"],
-      "extensions": [".tb",".timeblok"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "timeblok",
-      "scopeName": "source.timeblok",
-      "path": "./syntaxes/timeblok.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "timeblok",
+        "aliases": [
+          "Timeblok",
+          "timeblok"
+        ],
+        "extensions": [
+          ".tb",
+          ".timeblok"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "timeblok",
+        "scopeName": "source.timeblok",
+        "path": "./syntaxes/timeblok.tmLanguage.json"
+      }
+    ]
   }
 }
