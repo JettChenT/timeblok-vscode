@@ -48,11 +48,11 @@
 				},
 				{
 					"name": "constant.other.longtime",
-					"match": "\\d*:\\d*(AM|am|PM|pm)?"
+					"match": "\\d+:\\d+(AM|am|PM|pm)?"
 				},
 				{
 					"name": "constant.other.shorttime",
-					"match": "\\d*(AM|am|PM|pm)"
+					"match": "\\d+(AM|am|PM|pm)"
 				}
 			]
 		},
